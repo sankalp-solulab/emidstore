@@ -8,6 +8,9 @@ import * as serviceWorker from "./serviceWorker";
 import axios from "./services";
 import configureStore, { history } from "./store";
 export const store = configureStore();
+
+import About_us from './components/Aboutus.jsx';
+
 import "./assets/css/animation/animate.css";
 import "./assets/css/bootstrap/bootstrap.css";
 import "./assets/css/owl-carousel/owl.carousel.css";
@@ -23,17 +26,17 @@ import "./assets/css/map.css";
 const demoHTML = () => <div>HELLO</div>;
 const App = () => {
   return (
-    <>
+    
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <BrowserRouter>
             <Switch>
-              <Route path="/" component={demoHTML} />
+              <Route path="/" component={About_us} />
             </Switch>
           </BrowserRouter>
         </ConnectedRouter>
       </Provider>
-    </>
+    
   );
 };
 

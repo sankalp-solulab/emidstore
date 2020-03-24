@@ -12,8 +12,8 @@ $(function() {
     
     $magicLine
         .width($(".active").width())
-        .css("left", $(".active a").position().left)
-        .data("origLeft", $magicLine.position().left)
+        // .css("left", $(".active a").position().left)
+        // .data("origLeft", $magicLine.position().left)
         .data("origWidth", $magicLine.width());
         
     $("#NavigationSlide li").find("a").hover(function() {

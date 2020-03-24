@@ -557,7 +557,7 @@ select.input-lg{
 }
 
 select.form-control{
-    background-image: url("../images/small-icon/select-arrow.png");
+    /* background-image: url("../images/small-icon/select-arrow.png"); */
     background-position: right center;
     background-repeat: no-repeat;
     -webkit-appearance: none;
@@ -626,7 +626,7 @@ input[type="checkbox"]{
 }
 .checkbox:after{
     content: "";
-    background: url(../images/small-icon/checkbox-sign.png) center right;
+    /* background: url(../images/small-icon/checkbox-sign.png) center right; */
     width: 12px;
     height: 12px;
     position: absolute;
@@ -774,7 +774,7 @@ input[type="checkbox"]:checked + .checkbox:after{opacity: 1;filter: alpha(opacit
 .modal-body input[type="checkbox"]:not(:checked) + label:after,
 .modal-body input[type="checkbox"]:checked + label:after {
     content: "";
-    background: url(../images/small-icon/checkbox-sign.png) center right;
+    /* background: url(../images/small-icon/checkbox-sign.png) center right; */
     width: 12px;
     height: 12px;
     position: absolute;
@@ -3696,7 +3696,7 @@ textarea.contactForm-textarea {
 
 .flipboxlast .flip-horizontal{
     -webkit-animation: flipHorizontal 8s infinite;
-    animation: flipHorizontal 8s infinite;.
+    animation: flipHorizontal 8s infinite;
 }
 
 @-webkit-keyframes flipVertical {
