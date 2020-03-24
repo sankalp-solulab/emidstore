@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 a, .btn , .close, .nav-tabs > li > a, .navbar-toggle, .navbar-toggle .icon-bar, h4{
@@ -16,4 +17,24 @@ a, .btn , .close, .nav-tabs > li > a, .navbar-toggle, .navbar-toggle .icon-bar, 
 .navbar{
   transition: background 1s ease-in-out;
   -webkit-transition: background 1s ease-in-out;  
+=======
+
+
+a, .btn , .close, .nav-tabs > li > a, .navbar-toggle, .navbar-toggle .icon-bar, h4{
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.owl-theme .owl-controls .owl-page span,
+.push-effects,
+.btn:after,
+.navbar-nav > li > a:after{
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.navbar{
+  transition: background 1s ease-in-out;
+  -webkit-transition: background 1s ease-in-out;  
+>>>>>>> 904f33c9cdb907342bf25f9884734ebd5c4d178a
 }
