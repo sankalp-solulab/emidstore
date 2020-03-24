@@ -7,7 +7,7 @@ class Blog extends Component {
 
     categoryHadler=(e)=>{
         console.log("AAAA",e.target.innerText);
-        //console.log("AAAA",document.getElementById('ctgry').innerText);
+        console.log("AAAA",document.getElementById('ctgry').innerText);
     }
 
   render() {
