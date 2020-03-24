@@ -26,7 +26,7 @@ module.exports = {
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             template: paths.templatePath,
-         
+           
             minify: {
                 collapseInlineTagWhitespace: true,
                 collapseWhitespace: true,
