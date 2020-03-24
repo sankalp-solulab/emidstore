@@ -30,7 +30,8 @@ const App = () => {
           <BrowserRouter>
             <Switch>
               {/* <Home></Home> */}
-              <Route path="/" component={Home} />
+              <Route path="/" exact component={Home} />
+              <Route path="/Aboutus" component={AboutUs}/>
             </Switch>
           </BrowserRouter>
         </ConnectedRouter>
