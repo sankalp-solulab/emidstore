@@ -19,6 +19,9 @@ import "./assets/css/fix-scroll.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import "./assets/css/map.css";
+import Header from "./components/Header/index.js";
+import Blog from "./components/Blog/index.js";
+import Footer from "./components/Footer/index.jsx";
 
 const demoHTML = () => <div>HELLO</div>;
 const App = () => {
@@ -27,9 +30,12 @@ const App = () => {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <BrowserRouter>
+          <Header></Header>
             <Switch>
-              <Route path="/" component={demoHTML} />
+              {/* <Home></Home> */}
+              <Route path="/" component={Blog} />
             </Switch>
+            <Footer/>
           </BrowserRouter>
         </ConnectedRouter>
       </Provider>
