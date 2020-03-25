@@ -9,7 +9,7 @@ import axios from "./services";
 import configureStore, { history } from "./store";
 export const store = configureStore();
 
-import About_us from './components/Aboutus.jsx';
+import About_us from './components/About_us/Aboutus.jsx';
 
 import "./assets/css/animation/animate.css";
 import "./assets/css/bootstrap/bootstrap.css";
