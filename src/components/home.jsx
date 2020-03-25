@@ -9,7 +9,7 @@ import WhyChooseUs from "./home/WhyChooseUS.jsx";
 import DedicatedEmedStore from "./home/DedicatedEmedStore.jsx";
 import ClientEmed from "./home/ClientEmed.jsx";
 import WorldWide from "./home/WorldWideStore.jsx";
-import Blog from "./home/Blogs.jsx";
+import Blogs from "./home/Blogs.jsx";
 import ContactUs from "./home/contactus.jsx";
 // import img from "../assets/images/header-bg-main";
 
@@ -27,7 +27,7 @@ class Home extends Component {
         <DedicatedEmedStore />
         <ClientEmed />
         <WorldWide />
-        <Blog />
+        <Blogs />
         <ContactUs />
       </div>
     );
