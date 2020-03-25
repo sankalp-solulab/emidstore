@@ -1,16 +1,25 @@
 import React, { Component } from "react";
-// import img from "../assets/images/header-bg-main";
-import img from '../../assets//images/blogbanner.jpg'
+import img from '../../assets//images/blogbanner.jpg';
 import Post from "./Post";
+import { connect } from "react-redux";
+import * as actions from "../../actions/index";
+import { withRouter } from "react-router-dom";
+
+
 
 class Blog extends Component {
 
+  componentWillMount() {
+    this.props.getBlogDetails();
+  }
+
     categoryHadler=(e)=>{
         console.log("AAAA",e.target.innerText);
-        console.log("Akkk");
+       
     }
 
   render() {
+    console.log("MY DATA : ",this.props.blogList);
     return (
 <div>
   <div className="innerbanner">
@@ -55,4 +64,20 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+const mapStateToProps = ({ Blog }) => {
+  const { blogList } = Blog;
+  return {
+      blogList
+  };
+};
+const mapDispatchToProps = dispatch => ({
+  getBlogDetails: () => dispatch(actions.getBlogDetails()),
+
+});
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Blog));
+
+//export default connect(mapStateToProps,mapDispatchToProps)(Blog);

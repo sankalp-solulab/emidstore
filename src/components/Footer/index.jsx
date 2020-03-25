@@ -48,13 +48,13 @@ class Footer extends Component {
                 <img className="img-responsive logo" title="EMedStore
                              logo" src={require('../../assets/images/logo.png')} alt="ready4s white" />
                 <ul>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/facebook-white.png" alt="Facebook" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/youtube-white.png" alt="YouTube" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/twitter-white.png" alt="Twitter" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/google-plus-white.png" alt="Google Plus" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/linkedin-white.png" alt="LinkedIn" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/appfutura-white.png" alt="AppFutura" /></a></li>
-                  <li><a href="#"><img src="https://www.ready4s.com/img/icon/clutch-white.png" alt="Clutch" /></a></li>
+                  <li><a href="#"><img src="" alt="Facebook" /></a></li>
+                  <li><a href="#"><img src="" alt="YouTube" /></a></li>
+                  <li><a href="#"><img src="" alt="Twitter" /></a></li>
+                  <li><a href="#"><img src="" alt="Google Plus" /></a></li>
+                  <li><a href="#"><img src="" alt="LinkedIn" /></a></li>
+                  <li><a href="#"><img src="" alt="AppFutura" /></a></li>
+                  <li><a href="#"><img src="" alt="Clutch" /></a></li>
                 </ul>
               </div>  
             </div>                             

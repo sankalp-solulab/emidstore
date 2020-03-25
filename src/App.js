@@ -30,7 +30,7 @@ const App = () => {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <BrowserRouter>
-          <Header></Header>
+          <Header/>
             <Switch>
               {/* <Home></Home> */}
               <Route path="/" component={Blog} />
