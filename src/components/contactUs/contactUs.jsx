@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import img from '../../assets/images/contactbanner.jpg';
+import { getContactData } from "../../actions/contactUs";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+
 
 class contactUs extends Component {
-
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-           name:"" ,
-           company:"",
-           phone:"",
-           email:"",
-           state:"",
-           details:"",
-        };
-      }
+  componentWillMount(){
+    this.props.getContactData();
+}
       handleData = event => {
           //const data:event.target.name;
           switch(event.target.name)
@@ -60,12 +54,14 @@ class contactUs extends Component {
         
       onSubmit = e => {
         e.preventDefault();
-       console.log(this.state);
-       // localStorage.setItem("userType",this.state.userType);
+   
        
       }
    
     render() {
+      const { name } = this.props;
+     // console.log(name);
+     console.log(this.props);
         return (
       <div>
   <div className="innerbanner">
@@ -190,4 +186,24 @@ class contactUs extends Component {
         )
     }
 }
-export default contactUs;
+const mapStateToProps =  state  => ({
+  name : state.contactUs.name,
+  email : state.contactUs.email,
+  phone : state.contactUs.phone,
+  company : state.contactUs.company,
+  state : state.contactUs.state,
+  details : state.contactUs.details,
+});
+  
+const mapDispatchToProps = dispatch => ({
+  getContactData: payload => dispatch(getContactData(payload)),
+  dispatch
+});
+
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+      mapDispatchToProps
+  )(contactUs)
+);
