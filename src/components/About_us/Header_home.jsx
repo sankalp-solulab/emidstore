@@ -347,7 +347,7 @@ class Header_home extends Component {
       </nav>
     </div>
   </header>
-</div>;
+</div>
 
             </div>
         )

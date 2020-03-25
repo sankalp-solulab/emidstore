@@ -52,7 +52,7 @@ class Header extends Component {
     
   <![endif]*/}
   <div className="wrapper"></div>
-</div>;
+</div>
 
             </div>
         )
