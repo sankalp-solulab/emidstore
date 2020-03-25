@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Aboutusbanner from "./AboutUSbanner.jsx";
 import Header from './header.jsx';
 import Header_home from './Header_home.jsx';
+import Footer from './Footer.jsx';
 
 class AboutUS extends Component {
   render() {
@@ -728,6 +729,24 @@ class AboutUS extends Component {
             </div>
           </section>
         </div>
+        <Footer/>
+       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+<script src="js/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/animation/wow.min.js"></script>        
+<script src="js/animation/wow.init.js"></script>
+<script src="js/easyResponsiveTabs.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jQuery.scrollSpeed.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/waypoints.min.js"></script>
+
+
+
+
       </div>
     );
   }
