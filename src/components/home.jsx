@@ -619,10 +619,8 @@ class Home extends Component {
                             className="phone__reveal__wrap"
                             data-reveal-wrap={4}
                           >
-                            <img
-                              src={require("../assets/images/mobile.png")}
-                            ></img>
-                            <img src="images/4.jpg" />
+                            <img src={require("../assets/images/4.jpg")}></img>
+                            {/* <img src="images/4.jpg" /> */}
                           </div>
                         </div>
                       </div>
