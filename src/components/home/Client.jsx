@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Blogsc from "./Blogsc.jsx";
 class Client extends Component {
   render() {
     return (
       <div className="col-sm-4">
-        <Blogsc />
         <div className="client text-center">
           <img
             className="mar-bot30"
