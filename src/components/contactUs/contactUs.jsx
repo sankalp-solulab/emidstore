@@ -62,8 +62,6 @@ class contactUs extends Component {
         e.preventDefault();
        console.log(this.state);
        // localStorage.setItem("userType",this.state.userType);
-      
-       
        
       }
    
