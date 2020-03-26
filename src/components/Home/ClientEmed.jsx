@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import { sentClientData } from "../../actions/client";
+import { sentClientData } from "../../actions/Home";
 import { connect } from "react-redux";
 import Clients from "./Clients.jsx";
 class ClientEmed extends Component {
   componentDidMount() {
-    import("../../assets/json/clients.json").then(res => {
-      console.log("res", res.default);
-      this.props.sentClientData(res.default);
-    });
+    this.props.sentClientData();
   }
   handleData() {
     console.log(this.props);
@@ -34,8 +31,8 @@ const mapStateToProps = state => {
 };
 // ({ data: state.clientReducer.data });
 const mapDispatchToProps = dispatch => ({
-  sentClientData: data => {
-    dispatch(sentClientData(data));
+  sentClientData: () => {
+    dispatch(sentClientData());
   }
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ClientEmed);
