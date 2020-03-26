@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { defaultFormat } from "moment";
-import Apps from "./Apps.jsx";
+import Apps from "../Home/Apps.jsx";
 class TypesofApp extends Component {
   render() {
     return (

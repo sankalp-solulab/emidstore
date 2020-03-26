@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 import { sentClientData } from "../../actions/client";
 import { connect } from "react-redux";
-
+import Clients from "./Clients.jsx";
 class ClientEmed extends Component {
   componentDidMount() {
     import("../../assets/json/clients.json").then(res => {
@@ -17,7 +17,7 @@ class ClientEmed extends Component {
     return (
       <section className="clientemedstore bg-gray">
         {/* {this.props.data} */}
-        <button onClick={() => this.handleData()}>asas</button>
+
         <div className="container">
           <div className="section-title">
             <h2>Our clients</h2>
