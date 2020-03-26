@@ -4,14 +4,17 @@ import {connect} from 'react-redux';
 import { withRouter } from "react-router-dom";
 
 class Pillers extends Component {
-    componentWillMount()
-    {
-      this.props.get_pillers()
+ 
+    // componentDidMount()
+    // {
+    //   this.props.get_pillers();
+    //   console.log("mount",this.props);
       
-    }
+    // }
     render() {
+      // const {About} = this.props;
       
-        console.log("render : ",this.props.About);
+      //   console.log("render : ",{About});
         
         return (
             <section className="pillersemedstore bg-primary">
@@ -94,15 +97,17 @@ class Pillers extends Component {
         )
     }
 }
-const mapStateToProps = (About) => {
-  return {
-      About
-  };
-};
-const mapDispatchToProps = dispatch => ({
-    get_pillers: () => dispatch(actions.get_pillers()),
-  });
-  export default withRouter(connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  )(Pillers));
+// const mapStateToProps = ({About}) => {
+//   //const { AboutAction } = About;
+//   return {
+//     About
+//   };
+// };
+// const mapDispatchToProps = dispatch => ({
+//     get_pillers: () => dispatch(actions.get_pillers()),
+//   });
+//   export default withRouter(connect(
+//     mapStateToProps,
+//     mapDispatchToProps,
+//   )(Pillers));
+  export default Pillers;

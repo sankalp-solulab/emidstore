@@ -6,9 +6,28 @@ import Footer from './Footer.jsx';
 import Customer from './Customers.jsx';
 import Pillers from './Pillers.jsx';
 import Healthcare from './Healthcare.jsx';
+import {connect} from 'react-redux';
+import { withRouter } from "react-router-dom";
+import * as actions from '../../actions/index';
 
 class AboutUS extends Component {
+  state={
+    About_us:null
+  }
+  componentDidMount()
+  {
+    this.props.get_pillers();
+    console.log("mount",this.props);  
+  }
+  componentDidUpdate()
+  {
+    console.log("update",this.props.data);  
+  }
+  
+  
   render() {
+    
+      console.log("render : ",this.props.data);
     return (
       <div>
         <div>
@@ -262,7 +281,9 @@ class AboutUS extends Component {
             </div>
           </section>
          <Customer/>
+
           <Pillers/>
+          
           <Healthcare/>
           
           <section id="contacts" className="contactemedstore gray-bg">
@@ -466,4 +487,18 @@ class AboutUS extends Component {
     );
   }
 }
-export default AboutUS;
+//const mapStateToProps =(state)=>{console.log('map',state.reducerName.data)}
+
+const mapStateToProps = (state) => ({
+ // console.log('map',state.Aboutus.AboutAction);
+  data:state.Aboutus.AboutAction
+  
+});
+const mapDispatchToProps = dispatch => ({
+    get_pillers: () => dispatch(actions.get_pillers()),
+  });
+  export default withRouter(connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(AboutUS));
+
