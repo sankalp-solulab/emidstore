@@ -15,7 +15,7 @@ class WhyChoosesingle extends Component {
         </span>
         <span className="cnt">
           {this.props.name}
-          <span>{this.props.text}</span>
+          <span>{this.props.text} </span>
         </span>
       </li>
     );
