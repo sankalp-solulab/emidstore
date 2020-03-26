@@ -10,6 +10,10 @@ export const GET_RESOURCES_DATA="GET_RESOURCES_DATA";
 
 export const SENT_APP_DATA = 'SENT_APP_DATA'
 export const GET_APP_DATA = 'GET_APP_DATA'
-//****HOME****//
 
+
+export const SENT_CHOOSE_DATA = 'SENT_CHOOSE_DATA'
+export const GET_CHOOSE_DATA = 'GET_CHOOSE_DATA'
+
+//****HOME****//
 

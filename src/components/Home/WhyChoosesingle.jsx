@@ -3,7 +3,7 @@ class WhyChoosesingle extends Component {
   render() {
     return (
       <li>
-        <img src={require("../../assets/images/manager.png")}></img>
+        <img src={this.props.img}></img>
 
         {/* <img src="images/manager.png" /> */}
         <span className="count">
@@ -14,10 +14,8 @@ class WhyChoosesingle extends Component {
           />
         </span>
         <span className="cnt">
-          Clients Served
-          <span>
-            (Across US, UK, Canada, <br /> Australia and India)
-          </span>
+          {this.props.name}
+          <span>{this.props.text}</span>
         </span>
       </li>
     );
