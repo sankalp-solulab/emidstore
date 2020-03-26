@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
+import * as actions from '../../actions/index';
+import {connect} from 'react-redux';
+import { withRouter } from "react-router-dom";
 
 class Pillers extends Component {
+    componentWillMount()
+    {
+      this.props.get_pillers()
+      
+    }
     render() {
+      
+        console.log("render : ",this.props.About);
+        
         return (
             <section className="pillersemedstore bg-primary">
             <div className="container">
@@ -83,4 +94,15 @@ class Pillers extends Component {
         )
     }
 }
-export default Pillers;
+const mapStateToProps = (About) => {
+  return {
+      About
+  };
+};
+const mapDispatchToProps = dispatch => ({
+    get_pillers: () => dispatch(actions.get_pillers()),
+  });
+  export default withRouter(connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(Pillers));

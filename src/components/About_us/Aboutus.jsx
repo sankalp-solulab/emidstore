@@ -269,7 +269,7 @@ class AboutUS extends Component {
             <div className="container">
               <div className="section-title">
                 <h2>Request a demo</h2>
-              </div>
+              </div>20.
               <p className="text-center">
                 Thank you for your interest in EMedStore and our services.
                 Please fill out the form below or e-mail us at{" "}
