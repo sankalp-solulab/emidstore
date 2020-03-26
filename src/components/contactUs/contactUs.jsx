@@ -5,12 +5,16 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 
-class contactUs extends Component {
-  componentWillMount(){
-    this.props.getContactData();
+class ContactUs extends Component {
+  componentDidMount(){
+    //const contactData=this.props;
+ 
+   // console.log(contactData);
+  //   this.props.getContactData(contactData);
+  //  // console.log("sss",this.props);
 }
       handleData = event => {
-          //const data:event.target.name;
+        
           switch(event.target.name)
           {
               case "name" :
@@ -47,21 +51,21 @@ class contactUs extends Component {
                     });
               }
 
-              
-              
-
           }
-        
+       
       onSubmit = e => {
         e.preventDefault();
-   
-       
-      }
+        
+        const contactData=this.state;
+        console.log("ContactUs -> contactData", contactData)
+        this.props.getContactData(contactData);
+        //console.log("jjj",contactData);
+      
+        }
    
     render() {
-      const { name } = this.props;
-     // console.log(name);
-     console.log(this.props);
+      //const { contactUs } = this.props;
+     // console.log(contactUs);
         return (
       <div>
   <div className="innerbanner">
@@ -81,7 +85,7 @@ class contactUs extends Component {
               <div className="row form-wrapper">
                 <div className="col-md-6 col-sm-12 col-xs-12 contactForm-col form-wrapper" id="edit-contact">
                   <div className="contactForm-caption form-wrapper" id="edit-title">
-                    <h1 style={{color: 'green'}}>Contact details</h1>
+        <h1 style={{color: 'green'}}>Contact details</h1>
                   </div>
                   <div className="contactForm-line">
                     <div className="contactForm-block contactForm-block--require">
@@ -111,8 +115,8 @@ class contactUs extends Component {
                     <div className="contactForm-block contactForm-block--require">
                       <select placeholder="Country" tabIndex={-1} id="edit-country" name="state"  onChange={event => this.handleData(event)} className="form-select required">
                         <option value="US">United States</option>
-                        <option value="GB">United Kingdom</option>
-                        <option value="IN">India</option>
+                        <option value="UNITED KINGDOM">United Kingdom</option>
+                        <option value="INDIA">India</option>
                       </select>
                       <div className="selectarrow"><b /></div>
                       <span className="contactForm-correct" title="Correct" />
@@ -186,14 +190,12 @@ class contactUs extends Component {
         )
     }
 }
-const mapStateToProps =  state  => ({
-  name : state.contactUs.name,
-  email : state.contactUs.email,
-  phone : state.contactUs.phone,
-  company : state.contactUs.company,
-  state : state.contactUs.state,
-  details : state.contactUs.details,
-});
+const mapStateToProps = ({ contactUs }) => {
+  const { name, company, email, phone, state,details } = contactUs;
+    return {
+      name, company, email, phone, state,details
+    };
+};
   
 const mapDispatchToProps = dispatch => ({
   getContactData: payload => dispatch(getContactData(payload)),
@@ -205,5 +207,6 @@ export default withRouter(
   connect(
     mapStateToProps,
       mapDispatchToProps
-  )(contactUs)
+  )(ContactUs)
 );
+
