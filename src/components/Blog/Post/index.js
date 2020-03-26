@@ -7,24 +7,24 @@ class Post extends Component{
             <div className="article">
               <a href="#">                
                 <div className="post-img-wrapper">
-                  <div className="post-img" style={{backgroundImage: 'url( https://ymedialabs.com/wp-content/uploads/2017/09/MG_7308-800x450.jpg)'}}>
+                  <div className="post-img" style={{backgroundImage: `url(${this.props.data.image})`}}>
                   </div>      
                 </div>
               </a>
               <div className="contents"> 
                 <div className="blogtitletop">
-                  <div className="cat-title">Leadership</div>
-                  <span>13 Aug 2017</span>
+                  <div className="cat-title">{this.props.data.category}</div>
+                  <span>{this.props.data.date}</span>
                 </div>
                 <div>
                   <h3 className="blog-title">
                     <a href="https://ymedialabs.com/measure-product-success/">
-                      How Do You Measure Product Success?
+                    {this.props.data.name}
                     </a>
                   </h3>
                 </div>
                 <div className="excerpt">
-                  Leaders constantly talk about the importance of innovation in the workplace, but most fail to sustain a truly innovative company culture.
+                  {this.props.data.metaData.description}
                 </div>
               </div>  
             </div>

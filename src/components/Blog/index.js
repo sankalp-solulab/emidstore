@@ -9,17 +9,40 @@ import { withRouter } from "react-router-dom";
 
 class Blog extends Component {
 
+  state={
+    postList:null
+  }
+
   componentWillMount() {
     this.props.getBlogDetails();
   }
 
-    categoryHadler=(e)=>{
-        console.log("AAAA",e.target.innerText);
-       
+  componentDidUpdate(){
+    console.log("Will Mount",this.props.blogList)
+    if(this.state.postList == null){
+      this.setState({
+        postList:this.props.blogList
+      })
+    }
+  }
+
+  categoryHadler=(e)=>{
+
+    if(e.target.innerText == "All"){
+      var data_filter=  this.props.blogList
+    }
+    else{
+      var data_filter = this.props.blogList.filter( element => element.category == e.target.innerText)
+      console.log("Filter",data_filter);
     }
 
+      this.setState({
+        postList:data_filter
+      })
+    
+  }
+
   render() {
-    console.log("MY DATA : ",this.props.blogList);
     return (
 <div>
   <div className="innerbanner">
@@ -35,7 +58,7 @@ class Blog extends Component {
       <div className="container">
         <div className="category">
           <ul>
-            <li><a className="active" href="#">All</a></li>
+            <li><a className="active" onClick={(e)=>this.categoryHadler(e)}>All</a></li>
             <li><a onClick={(e)=>this.categoryHadler(e)}>Leadership</a></li>
             <li><a onClick={(e)=>this.categoryHadler(e)}>Trending</a></li>
             <li><a onClick={(e)=>this.categoryHadler(e)}>Technology</a></li>
@@ -45,9 +68,14 @@ class Blog extends Component {
         </div>
         <div className="container-flex-fluid">
           <div className="row-flex">
-            <Post/>
-            <Post/>
-            <Post/>
+         
+        {this.state.postList != null 
+        ? this.state.postList.map(res => {
+          return  <Post data={res}/>  
+         })
+         :
+         null
+        }
           </div>
         </div>
         <div className="row">
