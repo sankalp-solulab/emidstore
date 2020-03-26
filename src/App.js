@@ -19,9 +19,8 @@ import "./assets/css/fix-scroll.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import "./assets/css/map.css";
-import Home from "./components/home.jsx";
+import Home from "./components/Home/index.jsx";
 
-const demoHTML = () => <div>HELLO</div>;
 const App = () => {
   return (
     <>
@@ -29,7 +28,6 @@ const App = () => {
         <ConnectedRouter history={history}>
           <BrowserRouter>
             <Switch>
-              {/* <Home></Home> */}
               <Route path="/" exact component={Home} />
             </Switch>
           </BrowserRouter>
