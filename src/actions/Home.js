@@ -25,3 +25,12 @@ export const getResourceData = payload => ({
   type: GET_RESOURCES_DATA,
   payload
 });
+
+export const sentAppData = () => ({
+  type: SENT_APP_DATA
+});
+
+export const getAppData = payload => ({
+  type: GET_APP_DATA,
+  payload
+});

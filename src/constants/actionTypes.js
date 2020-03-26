@@ -7,4 +7,9 @@ export const GET_CLIENT_DATA="GET_CLIENTS_DATA";
 //Resources
 export const SENT_RESOURCES_DATA="SENT_RESOURCES_DATA";
 export const GET_RESOURCES_DATA="GET_RESOURCES_DATA";
+
+export const SENT_APP_DATA = 'SENT_APP_DATA'
+export const GET_APP_DATA = 'GET_APP_DATA'
 //****HOME****//
+
+
