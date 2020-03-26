@@ -6,17 +6,17 @@ class Clients extends Component {
   componentDidMount() {
     this.props.sentClientData();
   }
-  componentDidUpdate() {
-    console.log("data", this.props.data);
-  }
+  // componentDidUpdate() {
+  //   console.log("data", this.props.data);
+  // }
   render() {
     const data = this.props.data || [];
     return (
       <div className="row">
         {data.map((value, index) => {
-          {
-            console.log("jsx", value, index);
-          }
+          // {
+          //   console.log("jsx", value, index);
+          // }
           return (
             <Client
               key={value.id}
@@ -31,7 +31,7 @@ class Clients extends Component {
   }
 }
 
-const mapStateToProps = state => ({ data: state.clientReducer.data });
+const mapStateToProps = state => ({ data: state.Home.data });
 // {
 //   console.log("map", state.clientReducer.data);
 // };
