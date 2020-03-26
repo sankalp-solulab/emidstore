@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import asyncComponent from "./utils/asyncComponent.jsx";
 import * as serviceWorker from "./serviceWorker";
-import axios from "./services";
+//import axios from "./services";
 import configureStore, { history } from "./store";
 export const store = configureStore();
 import "./assets/css/animation/animate.css";
@@ -22,6 +22,7 @@ import "./assets/css/map.css";
 import Header from "./components/Header/index.js";
 import Blog from "./components/Blog/index.js";
 import Footer from "./components/Footer/index.jsx";
+import ContactUs from "./components/ContactUs/index.jsx";
 
 const demoHTML = () => <div>HELLO</div>;
 const App = () => {
@@ -33,7 +34,9 @@ const App = () => {
           <Header/>
             <Switch>
               {/* <Home></Home> */}
-              <Route path="/" component={Blog} />
+              <Route path="/" component={Blog} exact/>
+              <Route path="/blog" component={Blog} exact/>
+              <Route path="/contactUs" component={ContactUs} />
             </Switch>
             <Footer/>
           </BrowserRouter>

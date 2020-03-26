@@ -18,7 +18,7 @@ class Blog extends Component {
   }
 
   componentDidUpdate(){
-    console.log("Will Mount",this.props.blogList)
+   
     if(this.state.postList == null){
       this.setState({
         postList:this.props.blogList
@@ -33,7 +33,6 @@ class Blog extends Component {
     }
     else{
       var data_filter = this.props.blogList.filter( element => element.category == e.target.innerText)
-      console.log("Filter",data_filter);
     }
 
       this.setState({
@@ -80,7 +79,7 @@ class Blog extends Component {
         </div>
         <div className="row">
           <div className="col-sm-12 text-center mar-top30">
-            <a href="#" className="btn btn-sm btn-primary">Load More</a>
+            <a  className="btn btn-sm btn-primary">Load More</a>
           </div>
         </div>
       </div>

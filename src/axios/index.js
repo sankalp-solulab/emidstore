@@ -21,14 +21,14 @@ const URL = `../services/blog.json`;
 
 async function fetchData(){
 
-                console.log("cool")
+               // console.log("cool")
                 const response = await fetch(`${URL}`);
                 const data = await response.json();
                
                 if (response.status >= 400) {
                     throw new Error(data.errors);
                 }
-                console.log("cool", response,data)
+              //  console.log("cool", response,data)
                 return data;
             };
 

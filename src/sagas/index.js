@@ -1,8 +1,13 @@
 import { all } from "redux-saga/effects";
 import blogSagas from "./blog";
+import contactUsSaga from './contactUs';
 
 export default function* rootSaga(getState) {
     yield all([
         blogSagas(),
+        contactUsSaga(),
     ]);
 }
+
+
+

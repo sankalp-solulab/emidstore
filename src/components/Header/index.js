@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     render(){
@@ -15,13 +16,13 @@ class Header extends Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <a className="navbar-brand" href="index.php">
+            <NavLink className="navbar-brand" to="/">
               <img src={require('../../assets/images/logo.png')} alt="Logo" />
-            </a>            
+            </NavLink>            
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav navbar-right f-size18">
-              <li><a href="portfolio.php">Portfolio</a></li>
+              <li><NavLink to="/portfolio">Portfolio</NavLink></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Services</a>
                 <ul className="dropdown-menu">
@@ -31,8 +32,8 @@ class Header extends Component {
                   <li><a href="#">Hosting</a></li>
                 </ul>
               </li>
-              <li><a href="blog.php">Blog</a></li>
-              <li><a href="aboutus.php">About</a></li>
+              <li><NavLink to="/blog">Blog</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
               <li className="dropdown megadropdown hidden-below-991">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Company</a>
                 <div className="dropdown-menu megamenu">
@@ -183,7 +184,7 @@ class Header extends Component {
                   </li>
                 </ul>
               </li>
-              <li className="contact"><a href="contactus.php">Contact</a></li>
+              <li className="contact"><NavLink to="/contactUs">Contact</NavLink></li>
             </ul>            
           </div>
         </div>

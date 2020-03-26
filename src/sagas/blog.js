@@ -2,7 +2,6 @@ import { all, takeEvery, call, put } from "redux-saga/effects";
 import * as actions from "../constants/actionTypes";
 import * as blogAction from "../actions";
 import axios from 'axios';
-//import {fetchData} from '../axios/index';
 
 function* getBlogList() {
   
@@ -14,14 +13,12 @@ function* getBlogList() {
     const response = yield import("../assets/json/blog.json");
     
      console.log("Responce DATA : ",response.default);
-    // if (response.status == 200) {
+   
        yield put(blogAction.getBlogDetailsSuccess(response.default));
-    // }
+    
 
 
-        // const data = yield call(fetchData);
-        // console.log("thiss",data)
-        // yield put(blogAction.getBlogDetailsSuccess(data));
+      
     
   
   } catch (error) {
