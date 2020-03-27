@@ -20,7 +20,7 @@ export default (state = INITIAL_STATE, action) => {
     case GET_RESOURCES_DATA:
       return {
         ...state,
-        data: action.payload
+        resources: action.payload
       };
 
     case GET_APP_DATA:

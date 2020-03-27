@@ -11,14 +11,6 @@ class DedicatedEmedStore extends Component {
 
           <div className="row">
             <Resourses />
-            <div className="col-sm-12 text-center">
-              <a
-                href="#"
-                className="btn btn-primary btn-lg mar-top30 mar-bot20"
-              >
-                Show More
-              </a>
-            </div>
           </div>
         </div>
       </section>
