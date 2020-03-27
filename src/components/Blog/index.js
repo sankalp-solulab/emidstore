@@ -10,7 +10,11 @@ import { withRouter } from "react-router-dom";
 class Blog extends Component {
 
   state={
-    postList:null
+    postList:null,
+    limitdata: 3,
+    increment: 3,
+    index: 0
+
   }
 
   componentWillMount() {
@@ -41,6 +45,12 @@ class Blog extends Component {
     
   }
 
+  handleDataLimit() {
+    this.setState({
+      limitdata: this.state.limitdata + this.state.increment
+    });
+  }
+
   render() {
     return (
 <div>
@@ -69,18 +79,25 @@ class Blog extends Component {
           <div className="row-flex">
          
         {this.state.postList != null 
-        ? this.state.postList.map(res => {
-          return  <Post data={res}/>  
+        ? this.state.postList.slice(this.state.index, this.state.limitdata).map((res,index) => {
+          return  <Post key={res.id} data={res}/>  
          })
          :
          null
-        }
+       } 
+
           </div>
         </div>
         <div className="row">
-          {/* <div className="col-sm-12 text-center mar-top30">
-            <a  className="btn btn-sm btn-primary">Load More</a>
-          </div> */}
+          <div className="col-sm-12 text-center mar-top30">
+            {/* <a  className="btn btn-sm btn-primary">Load More</a> */}
+            <button
+            onClick={() => this.handleDataLimit()}
+            className="btn btn-primary btn-lg mar-top30 mar-bot20"
+          >
+            Load More
+          </button>
+          </div>
         </div>
       </div>
     </section>

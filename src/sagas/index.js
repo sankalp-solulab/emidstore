@@ -3,6 +3,7 @@ import blogSagas from "./blog";
 import contactUsSaga from './contactUs';
 import portfolioSaga from './portfolio';
 import aboutUsSaga from './aboutUs';
+import homeSaga from './home';
 
 export default function* rootSaga(getState) {
     yield all([
@@ -10,6 +11,7 @@ export default function* rootSaga(getState) {
         contactUsSaga(),
         portfolioSaga(),
         aboutUsSaga(),
+        homeSaga()
     ]);
 }
 

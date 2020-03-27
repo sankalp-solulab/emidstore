@@ -20,6 +20,7 @@ import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import "./assets/css/map.css";
 import Header from "./components/Header/index.js";
+import Home from "./components/Home/index.jsx";
 import Blog from "./components/Blog/index.js";
 import Footer from "./components/Footer/index.jsx";
 import ContactUs from "./components/ContactUs/index.jsx";
@@ -37,7 +38,7 @@ const App = () => {
           <Header/>
             <Switch>
               {/* <Home></Home> */}
-              <Route path="/" component={Blog} exact/>
+              <Route path="/" component={Home} exact/>
               <Route path="/blog" component={Blog} exact/>
               <Route path="/contactUs" component={ContactUs} />
               <Route path="/portfolio" component={Portfolio}/>

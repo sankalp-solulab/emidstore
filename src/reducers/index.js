@@ -4,6 +4,7 @@ import Blog from "./blog";
 import ContactUs from "./contactUs"
 import Portfolio from "./portfolio"
 import Aboutus from "./aboutus"
+import Home from "./Home"
 
 export default history =>
     combineReducers({
@@ -12,4 +13,5 @@ export default history =>
         ContactUs,
         Portfolio,
         Aboutus,
+        Home
     });
