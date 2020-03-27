@@ -78,9 +78,9 @@ class Blog extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-12 text-center mar-top30">
+          {/* <div className="col-sm-12 text-center mar-top30">
             <a  className="btn btn-sm btn-primary">Load More</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

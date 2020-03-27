@@ -85,11 +85,11 @@ class Portfolio extends Component {
            
 
               <div className="row">
-                <div className="col-sm-12 text-center mar-top30">
+                {/* <div className="col-sm-12 text-center mar-top30">
                   <a href="#" className="btn btn-sm btn-primary">
                     Load More
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
