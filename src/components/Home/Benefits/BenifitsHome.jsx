@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Benifits from "./Benifits.jsx";
 import { connect } from "react-redux";
-import { sentBenefitsData } from "../../actions/Home";
+import { sentBenefitsData } from "../../../actions/Home";
 class BenifitsHome extends Component {
   componentDidMount() {
     this.props.sentBenefitsData();

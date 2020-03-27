@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Apps from "../Home/Apps.jsx";
+import Apps from "./Apps.jsx";
 class TypesofApp extends Component {
   render() {
     return (

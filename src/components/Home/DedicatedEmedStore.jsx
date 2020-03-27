@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Resourses from "./Resourses.jsx";
+import Resourses from "./Resources/Resourses.jsx";
 class DedicatedEmedStore extends Component {
   render() {
     return (

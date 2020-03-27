@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Feature from "./Feature.jsx";
 import { connect } from "react-redux";
-import { sentFeatureList } from "../../actions/Home";
+import { sentFeatureList } from "../../../actions/Home";
 class FeatureListOfApp extends Component {
   componentDidMount() {
     this.props.sentFeatureData();
@@ -18,21 +18,21 @@ class FeatureListOfApp extends Component {
             <div className="col-md-6">
               <div className="mobileslider">
                 <div className="mobile">
-                  <img src={require("../../assets/images/mobile.png")}></img>
+                  <img src={require("../../../assets/images/mobile.png")}></img>
                   {/* <img src="images/mobile.png" /> */}
                 </div>
                 <div className="owl-carousel owl-theme">
                   <div className="item">
-                    <img src={require("../../assets/images/1.jpg")}></img>
+                    <img src={require("../../../assets/images/1.jpg")}></img>
                   </div>
                   <div className="item">
-                    <img src={require("../../assets/images/2.jpg")}></img>
+                    <img src={require("../../../assets/images/2.jpg")}></img>
                   </div>
                   <div className="item">
-                    <img src={require("../../assets/images/3.jpg")}></img>
+                    <img src={require("../../../assets/images/3.jpg")}></img>
                   </div>
                   <div className="item">
-                    <img src={require("../../assets/images/4.jpg")}></img>
+                    <img src={require("../../../assets/images/4.jpg")}></img>
                   </div>
                 </div>
               </div>

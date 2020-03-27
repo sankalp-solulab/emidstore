@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WhyChoosesingle from "./WhyChoosesingle.jsx";
 import { connect } from "react-redux";
-import * as action from "../../actions/Home.js";
+import * as action from "../../../actions/Home.js";
 class WhyChooseFeature extends Component {
   componentWillMount() {
     this.props.setfeature();

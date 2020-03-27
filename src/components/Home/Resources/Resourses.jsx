@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import Client from "./Client.jsx";
-import { sentClientData } from "../../actions/Home";
+import Resourse from "./Resourse.jsx";
 import { connect } from "react-redux";
-class Clients extends Component {
+import { sentResourceData } from "../../../actions/Home";
+class Resourses extends Component {
   componentDidMount() {
-    this.props.sentClientData();
+    this.props.sentResourceData();
   }
-  // componentDidUpdate() {
-  //   console.log("data", this.props.data);
-  // }
+
   render() {
     const data = this.props.data || [];
     return (
@@ -18,7 +16,7 @@ class Clients extends Component {
           //   console.log("jsx", value, index);
           // }
           return (
-            <Client
+            <Resourse
               key={value.id}
               img={value.img}
               name={value.name}
@@ -26,18 +24,17 @@ class Clients extends Component {
             />
           );
         })}
+        {/* <Resourse /> */}
+        {/* <Resourse /> */}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({ data: state.Home.data });
-// {
-//   console.log("map", state.clientReducer.data);
-// };
-const mapDispatchToProps = dispatch => ({
-  sentClientData: () => {
-    dispatch(sentClientData());
-  }
+const mapStateToProps = state => ({
+  data: state.Home.data
 });
-export default connect(mapStateToProps, mapDispatchToProps)(Clients);
+const mapDispatchToProps = dispatch => ({
+  sentResourceData: () => dispatch(sentResourceData())
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Resourses);

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import App from "./App.jsx";
-import * as action from "../../actions/Home.js";
+import * as action from "../../../actions/Home.js";
 
 class Apps extends Component {
   componentWillMount() {

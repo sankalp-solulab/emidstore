@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import Resourse from "./Resourse.jsx";
+import Client from "./Client.jsx";
+import { sentClientData } from "../../../actions/Home";
 import { connect } from "react-redux";
-import { sentResourceData } from "../../actions/Home";
-class Resourses extends Component {
+class Clients extends Component {
   componentDidMount() {
-    this.props.sentResourceData();
+    this.props.sentClientData();
   }
-
+  // componentDidUpdate() {
+  //   console.log("data", this.props.data);
+  // }
   render() {
     const data = this.props.data || [];
     return (
@@ -16,7 +18,7 @@ class Resourses extends Component {
           //   console.log("jsx", value, index);
           // }
           return (
-            <Resourse
+            <Client
               key={value.id}
               img={value.img}
               name={value.name}
@@ -24,17 +26,18 @@ class Resourses extends Component {
             />
           );
         })}
-        {/* <Resourse /> */}
-        {/* <Resourse /> */}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  data: state.Home.data
-});
+const mapStateToProps = state => ({ data: state.Home.data });
+// {
+//   console.log("map", state.clientReducer.data);
+// };
 const mapDispatchToProps = dispatch => ({
-  sentResourceData: () => dispatch(sentResourceData())
+  sentClientData: () => {
+    dispatch(sentClientData());
+  }
 });
-export default connect(mapStateToProps, mapDispatchToProps)(Resourses);
+export default connect(mapStateToProps, mapDispatchToProps)(Clients);
