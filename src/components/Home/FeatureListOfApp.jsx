@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import Feature from "./Feature.jsx";
+import { connect } from "react-redux";
+import { sentFeatureList } from "../../actions/Home";
 class FeatureListOfApp extends Component {
+  componentDidMount() {
+    this.props.sentFeatureData();
+  }
   render() {
+    const data = this.props.data || [];
     return (
       <section className="featurelistemedstore">
         <div className="container">
@@ -17,123 +24,31 @@ class FeatureListOfApp extends Component {
                 <div className="owl-carousel owl-theme">
                   <div className="item">
                     <img src={require("../../assets/images/1.jpg")}></img>
-
-                    {/* <img src="images/1.jpg" /> */}
                   </div>
                   <div className="item">
                     <img src={require("../../assets/images/2.jpg")}></img>
-
-                    {/* <img src="images/2.jpg" /> */}
                   </div>
                   <div className="item">
                     <img src={require("../../assets/images/3.jpg")}></img>
-
-                    {/* <img src="images/3.jpg" /> */}
                   </div>
                   <div className="item">
                     <img src={require("../../assets/images/4.jpg")}></img>
-
-                    {/* <img src="images/4.jpg" /> */}
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6 mar-top30">
               <div className="row">
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/*                 <img src={require("../assets/images/car.png")}></img>
-                     */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/* <img src="images/car.png" /> */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="list-of-feature">
-                    <img src={require("../../assets/images/car.png")}></img>
-
-                    {/* <img src="images/car.png" /> */}
-                    <h3>Ride Now</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
+                {data.map((value, index) => {
+                  return (
+                    <Feature
+                      key={value.id}
+                      img={value.img}
+                      title={value.name}
+                      text={value.text}
+                    />
+                  );
+                })}
                 <div className="col-sm-12">
                   <a href="#" className="btn btn-sm btn-primary">
                     Show More
@@ -147,4 +62,11 @@ class FeatureListOfApp extends Component {
     );
   }
 }
-export default FeatureListOfApp;
+
+const mapStateToProps = state => ({ data: state.Home.feature });
+const mapDispatchToProps = dispatch => ({
+  sentFeatureData: () => {
+    dispatch(sentFeatureList());
+  }
+});
+export default connect(mapStateToProps, mapDispatchToProps)(FeatureListOfApp);

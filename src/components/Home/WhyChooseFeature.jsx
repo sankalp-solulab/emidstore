@@ -25,8 +25,8 @@ class WhyChooseFeature extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log("single", state.clientReducer.single);
-  return { single: state.clientReducer.single };
+  // console.log("single ye wala", state.Home.single);
+  return { single: state.Home.single };
 };
 const mapDispatchToProps = dispatch => ({
   setfeature: () => dispatch(action.setfeature())

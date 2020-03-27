@@ -3,12 +3,17 @@ import {
   getClientData,
   getResourceData,
   getAppData,
-  getfeature
+  getfeature,
+  getBenefitsData,
+  getFeatureList
 } from "../actions/Home";
 import {
   SENT_CLIENT_DATA,
   SENT_RESOURCES_DATA,
-  SENT_APP_DATA
+  SENT_APP_DATA,
+  SENT_CHOOSE_DATA,
+  SENT_BENEFITS_DATA,
+  SENT_FEATURE_LIST
 } from "../constants/actionTypes";
 
 //*****Client*****//
@@ -36,10 +41,23 @@ function* sentChooseData() {
   yield put(getfeature(response.default));
 }
 
+function* sentBenefitsData() {
+  const response = yield import("../assets/json/benefits.json");
+  console.log("single", response.default);
+  yield put(getBenefitsData(response.default));
+}
+
+function* sentFeatureList() {
+  const response = yield import("../assets/json/features app.json");
+  console.log("single", response.default);
+  yield put(getFeatureList(response.default));
+}
+
 export default function* rootsaga() {
   yield takeEvery(SENT_CLIENT_DATA, sentClientData);
   yield takeEvery(SENT_RESOURCES_DATA, sentResourceData);
   yield takeEvery(SENT_APP_DATA, sentAppData);
-  yield takeEvery(SENT_APP_DATA, sentAppData);
   yield takeEvery(SENT_CHOOSE_DATA, sentChooseData);
+  yield takeEvery(SENT_BENEFITS_DATA, sentBenefitsData);
+  yield takeEvery(SENT_FEATURE_LIST, sentFeatureList);
 }

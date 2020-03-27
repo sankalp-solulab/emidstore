@@ -2,7 +2,9 @@ import {
   GET_CLIENT_DATA,
   GET_RESOURCES_DATA,
   GET_APP_DATA,
-  GET_CHOOSE_DATA
+  GET_CHOOSE_DATA,
+  GET_BENEFITS_DATA,
+  GET_FEATURE_LIST
 } from "../constants/actionTypes";
 
 const INITIAL_STATE = {};
@@ -27,13 +29,24 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         appdata: action.payload
       };
-    case GET_CHOOSE_DATA: {
+    case GET_CHOOSE_DATA:
       console.log("reducer", action);
       return {
         ...state,
         single: action.payload
       };
-    }
+    case GET_BENEFITS_DATA:
+      console.log("reducer", action);
+      return {
+        ...state,
+        benefits: action.payload
+      };
+    case GET_FEATURE_LIST:
+      console.log("reducer", action);
+      return {
+        ...state,
+        feature: action.payload
+      };
     default:
       return state;
   }
