@@ -3,6 +3,7 @@ import { connectRouter } from "connected-react-router";
 import Blog from "./blog";
 import ContactUs from "./contactUs"
 import Portfolio from "./portfolio"
+import Aboutus from "./aboutus"
 
 export default history =>
     combineReducers({
@@ -10,4 +11,5 @@ export default history =>
         Blog,
         ContactUs,
         Portfolio,
+        Aboutus,
     });
