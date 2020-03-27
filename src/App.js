@@ -9,6 +9,19 @@ import axios from './services';
 import configureStore, { history } from "./store";
 export const store = configureStore();
 
+import "./assets/css/animation/animate.css";
+import "./assets/css/bootstrap/bootstrap.css";
+import "./assets/css/owl-carousel/owl.carousel.css";
+import "./assets/css/owl-carousel/owl.theme.css";
+import "./assets/css/owl-carousel/owl.transitions.css";
+import "./assets/css/animation/animate.css";
+import "./assets/css/animation.css";
+import "./assets/css/fix-scroll.css";
+import "./assets/css/responsive.css";
+import "./assets/css/style.css";
+import "./assets/css/map.css";
+
+import Portfolio from './components/Portfolio';
 
 const demoHTML = () => (<div>HELLO</div>);
 const App = () => {
@@ -18,7 +31,8 @@ const App = () => {
                 <ConnectedRouter history={history}>
                     <BrowserRouter>
                         <Switch>
-                            <Route path="/" component={demoHTML} />
+                            <Route path="/" component={demoHTML} exact/>
+                            <Route path="/Portfolio" component={Portfolio} />
                         </Switch>
                     </BrowserRouter>
                 </ConnectedRouter>
@@ -26,8 +40,6 @@ const App = () => {
         </>
     );
 }
-
-
 
 ReactDOM.render(
     <App />,
