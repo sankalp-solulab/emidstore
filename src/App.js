@@ -23,6 +23,7 @@ import Header from "./components/Header/index.js";
 import Blog from "./components/Blog/index.js";
 import Footer from "./components/Footer/index.jsx";
 import ContactUs from "./components/ContactUs/index.jsx";
+import Portfolio from "./components/Portfolio/index.jsx";
 
 const demoHTML = () => <div>HELLO</div>;
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/" component={Blog} exact/>
               <Route path="/blog" component={Blog} exact/>
               <Route path="/contactUs" component={ContactUs} />
+              <Route path="/portfolio" component={Portfolio}/>
             </Switch>
             <Footer/>
           </BrowserRouter>
