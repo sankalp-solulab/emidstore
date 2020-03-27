@@ -25,6 +25,7 @@ import Footer from "./components/Footer/index.jsx";
 import ContactUs from "./components/ContactUs/index.jsx";
 import Portfolio from "./components/Portfolio/index.jsx";
 import Aboutus from "./components/About_us/Aboutus.jsx";
+import {Page404} from "./components/Error/index.jsx"
 
 const demoHTML = () => <div>HELLO</div>;
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
               <Route path="/contactUs" component={ContactUs} />
               <Route path="/portfolio" component={Portfolio}/>
               <Route path="/about" component={Aboutus}/>
+              <Route component={Page404}/>
             </Switch>
             <Footer/>
           </BrowserRouter>
