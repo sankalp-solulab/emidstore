@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 import Aboutusbanner from "./AboutUSbanner.jsx";
-import Header from './header.jsx';
-import Header_home from './Header_home.jsx';
-import Footer from './Footer.jsx';
-
 import Customer from './Customers.jsx';
 import Pillers from './Pillers.jsx';
 import Healthcare from './Healthcare.jsx';
@@ -17,6 +13,15 @@ import { withRouter } from "react-router-dom";
 import * as actions from '../../actions/index';
 
 class AboutUS extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+    limitdata: 3,
+    increment: 3,
+    index: 0
+    };
+  }
   
   componentDidMount()
   {
@@ -31,14 +36,16 @@ class AboutUS extends Component {
     console.log("data1" ,this.props.health); 
     
   }
+  handleDataLimit() {
+    this.setState({
+    limitdata: this.state.limitdata + this.state.increment
+    });
+    }
   
-  
-  render() {
+  render() {  
     return (
+      
       <div>
-        <div>
-        <Header_home/>
-        </div>
         <div>
         <Aboutusbanner /> </div>
         <div className="main-container">
@@ -155,7 +162,8 @@ class AboutUS extends Component {
               </div>
               
         {this.props.health != null 
-        ?this.props.health.map(res => {
+        ?this.props.health.slice(this.state.index, this.state.limitdata)
+        .map(res => {
           return  <Healthcare health={res}/>  
          })
          :
@@ -166,18 +174,38 @@ class AboutUS extends Component {
           </section>
           <div className="row">
                 <div className="col-sm-12 text-center">
-                  <a
+                  <button
                     href="#"
-                    className="btn btn-primary btn-lg mar-top30 mar-bot20"
+                    className="btn btn-primary btn-lg mar-top30 mar-bot20" onClick={() => this.handleDataLimit()}
                   >
                     Show More
-                  </a>
+                  </button>
                 </div>
               </div>
           {/* Healthcare -stop */}
           <Contact/>
         </div>
- </div>
+        
+
+        
+       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+<script src="js/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/animation/wow.min.js"></script>        
+<script src="js/animation/wow.init.js"></script>
+<script src="js/easyResponsiveTabs.js"></script>
+<script src="js/script.js"></script>
+<script src="js/jQuery.scrollSpeed.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/waypoints.min.js"></script>
+
+
+
+
+      </div>
     );
   }
 }

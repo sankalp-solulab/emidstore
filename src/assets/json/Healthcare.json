@@ -3,7 +3,6 @@
         "id": 1,
         "name": "Daniel M. Foote",
         "title" : "Sr. Tech Head",
-        "image": "",
         "metaData": {
             "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
         }
@@ -12,7 +11,6 @@
         "id": 2,
         "name": "Daniel M. Foote",
         "title" : "Sr. Tech Head",
-        "image": "",
         "metaData": {
             "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
         }
@@ -21,9 +19,32 @@
         "id": 3,
         "name": "Daniel M. Foote",
         "title" : "Sr. Tech Head",
-        "image": "",
         "metaData": {
             "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
         }
-    }    
+    },  
+    {
+        "id": 3,
+        "name": "Daniel M. Foote",
+        "title" : "Sr. Tech Head",
+        "metaData": {
+            "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
+        }
+    }, 
+    {
+        "id": 3,
+        "name": "Daniel M. Foote",
+        "title" : "Sr. Tech Head",
+        "metaData": {
+            "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
+        }
+    } ,
+    {
+        "id": 3,
+        "name": "Daniel M. Foote",
+        "title" : "Sr. Tech Head",
+        "metaData": {
+            "description": "As a Tech Head, Daniel looks after the day to day installation and operation of Mining Rigs. He plays a important role in optimising efficiency of our Rigs."
+        }
+    }   
 ]
