@@ -17,7 +17,9 @@ class Resourse extends Component {
             <p>{this.props.text}</p>
             <ul className="socialicons">
               <li>
-                <a href="#" className="icon fa fa-facebook" />
+                <a href="#" className="icon fa fa-facebook" alt="facebook">
+                  aaaaaaaaaaaaaaaaaa
+                </a>
               </li>
               <li>
                 <a href="#" className="icon fa fa-twitter" />

@@ -14,8 +14,9 @@ import React, { Component } from "react";
 // import "../assets/js/animation/navigation";
 // import "../assets/js/animation/wow.init";
 // import "../assets/js/animation/wow.min";
+
 class Aboutusbanner extends Component {
-  render() {
+  componentDidMount() {
     var init = function() {
       let isMobile =
         navigator.userAgent &&
@@ -78,12 +79,15 @@ class Aboutusbanner extends Component {
     window.addEventListener
       ? window.addEventListener("load", initParticleSlider, false)
       : (window.onload = initParticleSlider);
-    <script
-      src="http://particleslider.com/js/particleslider/current/particleslider.js"
-      type="text/javascript"
-    ></script>;
+    // <script
+    //   src="http://particleslider.com/js/particleslider/current/particleslider.js"
+    //   type="text/javascript"
+    // ></script>;
+  }
+  render() {
     return (
       <div>
+        &lt;&gt;
         <div className="full-width-banner">
           <div className="item">
             <div className="item-image" style={{ background: "#333" }} />
@@ -98,7 +102,10 @@ class Aboutusbanner extends Component {
                 <h1 id="text" className="wow fadeInUp">
                   USER EXPERIENCE
                 </h1>
-                {/* <a href="#contact" class="btn btn-md btn-primary">LET'S TALK</a> */}
+
+                {/* <a href="#contact" className="btn btn-md btn-primary">
+                  LET'S TALK
+                </a> */}
               </div>
             </div>
           </div>
