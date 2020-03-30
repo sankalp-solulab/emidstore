@@ -17,9 +17,6 @@ function* getBlogList() {
        yield put(blogAction.getBlogDetailsSuccess(response.default));
     
 
-
-      
-    
   
   } catch (error) {
     console.log("TCL: function*getBlogList -> error", error);
