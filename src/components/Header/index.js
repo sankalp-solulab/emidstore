@@ -23,15 +23,7 @@ class Header extends Component {
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav navbar-right f-size18">
               <li><NavLink to="/portfolio" >Portfolio</NavLink></li>
-              <li className="dropdown" >
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown" >Services</a>
-                <ul className="dropdown-menu">
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Development</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
-                  <li><a href="#">Hosting</a></li>
-                </ul>
-              </li>
+  
               <li><NavLink to="/blog" >Blog</NavLink></li>
               <li><NavLink to="/about" >About</NavLink></li>
               <li className="dropdown megadropdown hidden-below-991">
@@ -39,7 +31,7 @@ class Header extends Component {
                 <div className="dropdown-menu megamenu">
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-3">
+                      {/* <div className="col-sm-3">
                         <div className="megamenuheading">
                           <h4>COPMANY</h4>
                         </div>
@@ -77,7 +69,7 @@ class Header extends Component {
                           <li><a href="#">Celebrations</a></li>
                         </ul>
                         <a href="#" className="megamenubtn">Current Job Opportunities</a>
-                      </div>
+                      </div> */}
                       <div className="col-sm-3 hidden-below-991">
                         <iframe width={280} height={160} src="https://www.youtube.com/embed/zSeeO41oseE" frameBorder={0} gesture="media" allowFullScreen />
                         <span className="underiframe">Get an insight about what do we do better than any of our competitors</span>
@@ -132,8 +124,8 @@ class Header extends Component {
                 </div>
               </li>
               <li className="dropdown hidden-above-991">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Company</a>
-                <ul className="dropdown-menu">
+                {/* <a href="#" className="dropdown-toggle" data-toggle="dropdown">Company</a> */}
+                {/* <ul className="dropdown-menu">
                   <li className="dropdown-submenu">
                     <a href="#" className="dropdown-toggle">COMPANY</a>
                     <ul className="dropdown-menu">
@@ -182,7 +174,7 @@ class Header extends Component {
                       <li><a href="#">Pricing</a></li>
                     </ul>
                   </li>
-                </ul>
+                </ul> */}
               </li>
               <li className="contact"><NavLink to="/contactUs">Contact</NavLink></li>
             </ul>            

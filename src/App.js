@@ -8,6 +8,7 @@ import * as serviceWorker from "./serviceWorker";
 //import axios from "./services";
 import configureStore, { history } from "./store";
 export const store = configureStore();
+
 import "./assets/css/animation/animate.css";
 import "./assets/css/bootstrap/bootstrap.css";
 import "./assets/css/owl-carousel/owl.carousel.css";
@@ -19,6 +20,11 @@ import "./assets/css/fix-scroll.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import "./assets/css/map.css";
+// import "./assets/fonts/fontawesome/font-awesome.css"
+import 'font-awesome/css/font-awesome.min.css';
+import "./assets/js/jquery-1.9.1.min.js"
+import "./assets/js/bootstrap/bootstrap.min.js"
+
 import Header from "./components/Header/index.js";
 import Home from "./components/Home/index.jsx";
 import Blog from "./components/Blog/index.js";

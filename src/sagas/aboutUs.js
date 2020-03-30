@@ -12,8 +12,8 @@ function* getApidata()
     const urlh = ('../assets/Json/Healthcare.json');
     try {
         const response = yield import("../assets/json/Pillers.json");
-        const Cust_response = yield import("../assets/Json/Customers.json");
-        const Health_response = yield import("../assets/Json/Healthcare.json");
+        const Cust_response = yield import("../assets/json/Customers.json");
+        const Health_response = yield import("../assets/json/Healthcare.json");
         console.log("cust",Health_response);
         
         console.log("response : ",response.default);
