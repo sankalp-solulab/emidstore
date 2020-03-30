@@ -52,6 +52,7 @@
     "connected-react-router": "^6.6.1",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^6.0.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "pixi-particles": "^4.2.0",

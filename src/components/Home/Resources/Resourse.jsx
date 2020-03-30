@@ -17,15 +17,13 @@ class Resourse extends Component {
             <p>{this.props.text}</p>
             <ul className="socialicons">
               <li>
-                <i href="#" clissName="icon fa fa-facebook" alt="facebook">
-                  aaaaaaaaaaaaaaaaaa
-                </i>{" "}
+                <a href="#" className="icon fa fa-facebook" alt="facebook"></a>{" "}
               </li>
               <li>
                 <a href="#" className="icon fa fa-twitter" />
               </li>
               <li>
-                <i href="#" className="icon fa fa-linkedin" />
+                <a href="#" className="icon fa fa-linkedin" />
               </li>
             </ul>
           </div>

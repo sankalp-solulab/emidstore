@@ -20,8 +20,8 @@ import "./assets/css/fix-scroll.css";
 import "./assets/css/responsive.css";
 import "./assets/css/style.css";
 import "./assets/css/map.css";
-import "./assets/fonts/fontawesome/font-awesome.css"
-
+// import "./assets/fonts/fontawesome/font-awesome.css"
+import 'font-awesome/css/font-awesome.min.css';
 import "./assets/js/jquery-1.9.1.min.js"
 import "./assets/js/bootstrap/bootstrap.min.js"
 
