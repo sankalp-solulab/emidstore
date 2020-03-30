@@ -11,17 +11,20 @@ class Posts extends Component {
     index: 0
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getBlogDetails();
+    this.setState({
+      postList: this.props.blogList
+    });
   }
 
-  componentDidUpdate() {
-    if (this.state.postList == null) {
-      this.setState({
-        postList: this.props.blogList
-      });
-    }
-  }
+  // componentDidUpdate() {
+  //   if (this.state.postList == null) {
+  //     this.setState({
+  //       postList: this.props.blogList
+  //     });
+  //   }
+  // }
 
   categoryHadler = e => {
     if (e.target.innerText == "All") {
