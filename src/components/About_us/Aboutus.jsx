@@ -17,6 +17,15 @@ import { withRouter } from "react-router-dom";
 import * as actions from '../../actions/index';
 
 class AboutUS extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+    limitdata: 3,
+    increment: 3,
+    index: 0
+    };
+  }
   
   componentDidMount()
   {
@@ -31,10 +40,15 @@ class AboutUS extends Component {
     console.log("data1" ,this.props.health); 
     
   }
+  handleDataLimit() {
+    this.setState({
+    limitdata: this.state.limitdata + this.state.increment
+    });
+    }
   
-  
-  render() {
+  render() {  
     return (
+      
       <div>
         <div>
         <Header/>
@@ -158,7 +172,8 @@ class AboutUS extends Component {
               </div>
               
         {this.props.health != null 
-        ?this.props.health.map(res => {
+        ?this.props.health.slice(this.state.index, this.state.limitdata)
+        .map(res => {
           return  <Healthcare health={res}/>  
          })
          :
@@ -169,18 +184,20 @@ class AboutUS extends Component {
           </section>
           <div className="row">
                 <div className="col-sm-12 text-center">
-                  <a
+                  <button
                     href="#"
-                    className="btn btn-primary btn-lg mar-top30 mar-bot20"
+                    className="btn btn-primary btn-lg mar-top30 mar-bot20" onClick={() => this.handleDataLimit()}
                   >
                     Show More
-                  </a>
+                  </button>
                 </div>
               </div>
           {/* Healthcare -stop */}
           <Contact/>
         </div>
         <Footer/>
+
+        
        
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
 <script src="js/bootstrap/bootstrap.min.js"></script>

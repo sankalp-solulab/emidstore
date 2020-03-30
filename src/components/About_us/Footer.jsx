@@ -76,9 +76,8 @@ class Footer extends Component {
               <div className="col-md-12">
                 <img
                   className="img-responsive logo"
-                  title="EMedStore
-                             logo"
-                  src="images/logo.png"
+                  title="EMedStore logo"
+                  src={require("../../assets/images/logo.png")}
                   alt="ready4s white"
                 />
                 <ul>

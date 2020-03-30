@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Header_home extends Component {
     render() {
         return (
@@ -24,7 +25,8 @@ class Header_home extends Component {
               <span className="icon-bar" />
             </button>
             <a className="navbar-brand" href="index.php">
-              <img src="images/logo.png" alt="Logo" />
+            <img src={require("../../assets/images/logo.png")}/>
+          
             </a>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
