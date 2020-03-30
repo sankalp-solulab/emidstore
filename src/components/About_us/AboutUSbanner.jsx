@@ -17,6 +17,7 @@ import React, { Component } from "react";
 
 class Aboutusbanner extends Component {
   componentDidMount() {
+    console.log("mount");
     var init = function() {
       let isMobile =
         navigator.userAgent &&
@@ -76,9 +77,10 @@ class Aboutusbanner extends Component {
       psScript.setAttribute("type", "text/javascript");
       document.body.appendChild(psScript);
     };
-    window.addEventListener
-      ? window.addEventListener("load", initParticleSlider, false)
-      : (window.onload = initParticleSlider);
+    initParticleSlider();
+    // window.addEventListener
+    //   ? window.addEventListener("load", initParticleSlider, false)
+    //   : (window.onload = initParticleSlider);
     // <script
     //   src="http://particleslider.com/js/particleslider/current/particleslider.js"
     //   type="text/javascript"
@@ -87,7 +89,6 @@ class Aboutusbanner extends Component {
   render() {
     return (
       <div>
-        &lt;&gt;
         <div className="full-width-banner">
           <div className="item">
             <div className="item-image" style={{ background: "#333" }} />
