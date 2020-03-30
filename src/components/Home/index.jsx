@@ -10,7 +10,7 @@ import WhyChooseUs from "./Whychoose/WhyChooseUS.jsx";
 import DedicatedEmedStore from "./DedicatedEmedStore.jsx";
 import ClientEmed from "./Clients/ClientEmed.jsx";
 import WorldWide from "./WorldWideStore.jsx";
-import Blog from "./Blog/Blogs.jsx";
+// import Blog from "./Blog/Blogs.jsx";
 import ContactUs from "./contactus.jsx";
 // import img from "../assets/images/header-bg-main";
 import Posts from "../Blog/Post/Posts.jsx";
