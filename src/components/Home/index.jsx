@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import HomeBanner from "./homeBanner.jsx";
 import IntroHome from "./intro.jsx";
 import TypesofApp from "./App/TypesofApp.jsx";
 import FeatureListOfApp from "./Features/FeatureListOfApp.jsx";
@@ -17,6 +18,7 @@ class Home extends Component {
   render() {
     return (
       <div className="main-container">
+        <HomeBanner />
         <IntroHome />
         <TypesofApp />
         <FeatureListOfApp />

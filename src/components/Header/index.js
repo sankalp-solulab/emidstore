@@ -22,9 +22,9 @@ class Header extends Component {
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav navbar-right f-size18">
-              <li><NavLink to="/portfolio" style={{color:"Gray"}}>Portfolio</NavLink></li>
+              <li><NavLink to="/portfolio" >Portfolio</NavLink></li>
               <li className="dropdown" >
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown" style={{color:"Gray"}}>Services</a>
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown" >Services</a>
                 <ul className="dropdown-menu">
                   <li><a href="#">Design</a></li>
                   <li><a href="#">Development</a></li>
@@ -32,10 +32,10 @@ class Header extends Component {
                   <li><a href="#">Hosting</a></li>
                 </ul>
               </li>
-              <li><NavLink to="/blog" style={{color:"Gray"}}>Blog</NavLink></li>
-              <li><NavLink to="/about" style={{color:"Gray"}}>About</NavLink></li>
+              <li><NavLink to="/blog" >Blog</NavLink></li>
+              <li><NavLink to="/about" >About</NavLink></li>
               <li className="dropdown megadropdown hidden-below-991">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown" style={{color:"Gray"}}>Company</a>
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown" >Company</a>
                 <div className="dropdown-menu megamenu">
                   <div className="container">
                     <div className="row">
