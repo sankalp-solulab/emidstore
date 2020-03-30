@@ -1,53 +1,50 @@
 import React, { Component } from "react";
-
+import Resources from "../Home/Resources/Resourses.jsx";
 import Aboutusbanner from "./AboutUSbanner.jsx";
-import Customer from './Customers.jsx';
-import Pillers from './Pillers.jsx';
-import Healthcare from './Healthcare.jsx';
-import Delivered_projects from './delivered_projects.jsx';
-import Vission_Mission from './Vision_Mission.jsx';
-import Contact from './Contact.jsx';
+import Customer from "./Customers.jsx";
+import Pillers from "./Pillers.jsx";
+import Healthcare from "./Healthcare.jsx";
+import Delivered_projects from "./delivered_projects.jsx";
+import Vission_Mission from "./Vision_Mission.jsx";
+import Contact from "./Contact.jsx";
 
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import * as actions from '../../actions/index';
+import * as actions from "../../actions/index";
+import BenifitsHome from "../Home/Benefits/BenifitsHome.jsx";
 
 class AboutUS extends Component {
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
     this.state = {
-    limitdata: 3,
-    increment: 3,
-    index: 0
+      limitdata: 3,
+      increment: 3,
+      index: 0
     };
   }
-  
-  componentDidMount()
-  {
+
+  componentDidMount() {
     this.props.get_pillers();
-    this.props.get_customer(); 
+    this.props.get_customer();
     this.props.get_healthcare();
   }
-  componentDidUpdate()
-  {
-    console.log("update",this.props.cust);
-    console.log("data1" ,this.props.pill);  
-    console.log("data1" ,this.props.health); 
-    
+  componentDidUpdate() {
+    console.log("update", this.props.cust);
+    console.log("data1", this.props.pill);
+    console.log("data1", this.props.health);
   }
   handleDataLimit() {
     this.setState({
-    limitdata: this.state.limitdata + this.state.increment
+      limitdata: this.state.limitdata + this.state.increment
     });
-    }
-  
-  render() {  
+  }
+
+  render() {
     return (
-      
       <div>
         <div>
-        <Aboutusbanner /> </div>
+          <Aboutusbanner />{" "}
+        </div>
         <div className="main-container">
           <section className="aboutemedstore">
             <div className="container">
@@ -103,32 +100,13 @@ class AboutUS extends Component {
               </div>
             </div>
           </section>
-         <Delivered_projects/>
-         <Vission_Mission/>
+          <Delivered_projects />
+          <Vission_Mission />
           {/* customer-start */}
-          <section className="benefitsofemedstore bg-gray">
-            <div className="container">
-              <div className="section-title">
-                <h2>
-                  The Benefits of app <br />
-                  business and customers
-                </h2>
-              </div>
-              
-          {console.log("map data1",this.props.data1)}
-          { this.props.cust != null 
-        ?this.props.cust.map(res => {
-          return  <Customer cust={res}/>  
-         })
-         :
-         null
-        }
-        </div>
-            
-          </section> 
-         {/* customer-stop */}
-        {/* Piller-start */}
-         <section className="pillersemedstore bg-primary">
+          <BenifitsHome></BenifitsHome>
+          {/* customer-stop */}
+          {/* Piller-start */}
+          <section className="pillersemedstore bg-primary">
             <div className="container">
               <div className="section-title">
                 <h2>
@@ -141,90 +119,47 @@ class AboutUS extends Component {
                   </span>
                 </h2>
               </div>
-         
-         {
-           this.props.pill != null 
-        ?this.props.pill.map(res => {
-          return  <Pillers pill={res}/>  
-         })
-         :
-         null
-        }
-        </div>
+
+              {this.props.pill != null
+                ? this.props.pill.map(res => {
+                    return <Pillers pill={res} />;
+                  })
+                : null}
+            </div>
           </section>
-        
+
           {/* Pillers -stop */}
-        {/* Healthcare -start */}
-        <section className="dedicatedemedstore bg-gray">
+          {/* Healthcare -start */}
+          <section className="dedicatedemedstore bg-gray">
             <div className="container">
               <div className="section-title">
                 <h2>Dedicated resource for healthcare</h2>
               </div>
-              
-        {this.props.health != null 
-        ?this.props.health.slice(this.state.index, this.state.limitdata)
-        .map(res => {
-          return  <Healthcare health={res}/>  
-         })
-         :
-         null
-        }
-        
-        </div>
+
+              <Resources></Resources>
+            </div>
           </section>
-          <div className="row">
-                <div className="col-sm-12 text-center">
-                  <button
-                    href="#"
-                    className="btn btn-primary btn-lg mar-top30 mar-bot20" onClick={() => this.handleDataLimit()}
-                  >
-                    Show More
-                  </button>
-                </div>
-              </div>
+
           {/* Healthcare -stop */}
-          <Contact/>
+          <Contact />
         </div>
-        
-
-        
-       
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
-<script src="js/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/animation/wow.min.js"></script>        
-<script src="js/animation/wow.init.js"></script>
-<script src="js/easyResponsiveTabs.js"></script>
-<script src="js/script.js"></script>
-<script src="js/jQuery.scrollSpeed.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/main.js"></script>
-<script src="js/waypoints.min.js"></script>
-
-
-
-
       </div>
     );
   }
 }
 //const mapStateToProps =(state)=>{console.log('map',state.reducerName.data)}
 
-const mapStateToProps = (state) => ({
- // console.log('map',state.Aboutus.AboutAction);
-  pill:state.Aboutus.AboutAction,  
- cust : state.Aboutus.Customer,
- health:state.Aboutus.Health
+const mapStateToProps = state => ({
+  // console.log('map',state.Aboutus.AboutAction);
+  pill: state.Aboutus.AboutAction,
+  cust: state.Aboutus.Customer,
+  health: state.Aboutus.Health
 });
 const mapDispatchToProps = dispatch => ({
-    get_pillers: () => dispatch(actions.get_pillers()),
-    get_customer:() => dispatch(actions.get_customer()),
-    get_healthcare:() => dispatch(actions.get_healthcare())
-    
-  });
-  export default withRouter(connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  )(AboutUS));
-
+  get_pillers: () => dispatch(actions.get_pillers()),
+  get_customer: () => dispatch(actions.get_customer()),
+  get_healthcare: () => dispatch(actions.get_healthcare())
+});
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(AboutUS)
+);

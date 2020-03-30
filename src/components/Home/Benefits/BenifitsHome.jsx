@@ -10,6 +10,11 @@ class BenifitsHome extends Component {
     const data = this.props.data || [];
     return (
       <section className="benefitsofemedstore">
+        <div className="container">
+          <div className="section-title">
+            <h2>The Benefits of app business and customers</h2>
+          </div>
+        </div>
         {data.map((value, index) => {
           return (
             <Benifits

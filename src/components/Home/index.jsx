@@ -13,7 +13,7 @@ import WorldWide from "./WorldWideStore.jsx";
 import Blog from "./Blog/Blogs.jsx";
 import ContactUs from "./contactus.jsx";
 // import img from "../assets/images/header-bg-main";
-
+import Posts from "../Blog/Post/Posts.jsx";
 class Home extends Component {
   render() {
     return (
@@ -29,7 +29,7 @@ class Home extends Component {
         <DedicatedEmedStore />
         <ClientEmed />
         <WorldWide />
-        <Blog />
+        <Posts />
         <ContactUs />
       </div>
     );
