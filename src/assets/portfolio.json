@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Practilo",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/practilo.jpg",
-        "category": "Practilo",
+        "category": "iso",
         "metaData": {
             "description": "Enterprise learning and assessment tool, with intelligent analytics."
         }
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "ShorePower",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/shorepower.jpg",
-        "category": "Shorepower Technologies",
+        "category": "Android",
         "metaData": {
             "description": "Kiosk and web based, e-payment enabled platform to provide electrified parking spaces."
         }
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "budgyt",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/budgyt.jpg",
-        "category": "Budgyt",
+        "category": "Web",
         "metaData": {
             "description": "One easy SaaS based tool for CFOs to streamline budgeting process."
         }
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Practilo",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/practilo.jpg",
-        "category": "Practilo",
+        "category": "iso",
         "metaData": {
             "description": "Enterprise learning and assessment tool, with intelligent analytics."
         }
@@ -39,7 +39,7 @@
         "id": 5,
         "name": "ShorePower",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/shorepower.jpg",
-        "category": "Shorepower Technologies",
+        "category": "Android",
         "metaData": {
             "description": "Kiosk and web based, e-payment enabled platform to provide electrified parking spaces."
         }
@@ -48,7 +48,7 @@
         "id": 6,
         "name": "budgyt",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/budgyt.jpg",
-        "category": "Budgyt",
+        "category": "Web",
         "metaData": {
             "description": "One easy SaaS based tool for CFOs to streamline budgeting process."
         }
@@ -57,7 +57,7 @@
         "id": 7,
         "name": "Practilo",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/practilo.jpg",
-        "category": "Practilo",
+        "category": "Android",
         "metaData": {
             "description": "Enterprise learning and assessment tool, with intelligent analytics."
         }
@@ -66,7 +66,7 @@
         "id": 8,
         "name": "ShorePower",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/shorepower.jpg",
-        "category": "Shorepower Technologies",
+        "category": "iso",
         "metaData": {
             "description": "Kiosk and web based, e-payment enabled platform to provide electrified parking spaces."
         }
@@ -75,7 +75,7 @@
         "id": 9,
         "name": "budgyt",
         "image": "https://www.finoit.com/wp-content/uploads/2017/05/budgyt.jpg",
-        "category": "Budgyt",
+        "category": "Web",
         "metaData": {
             "description": "One easy SaaS based tool for CFOs to streamline budgeting process."
         }

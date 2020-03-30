@@ -13,14 +13,9 @@ function* getPortfolioList() {
     const response = yield import("../assets/portfolio.json");
     
      console.log("Responce DATA : ",response.default);
-    if (response.status == 200) {
+    
        yield put(portfolioActions.getPortfolioDetailsSuccess(response.default));
-    }
-
-    const data = yield call(fetchData);
-    console.log("thiss",data)
-    yield put(blogAction.getPortfolioDetailsSuccess(data));
-  
+   
   } catch (error) {
     console.log("TCL: function*getPortfolioList -> error", error);
   }
