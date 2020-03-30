@@ -1,10 +1,17 @@
 import { combineReducers } from "redux";
 import { connectRouter } from "connected-react-router";
-import Portfolio from './Portfolio';
+import Blog from "./blog";
+import ContactUs from "./contactUs"
+import Portfolio from "./portfolio"
+import Aboutus from "./aboutus"
+import Home from "./Home"
 
 export default history =>
     combineReducers({
         router: connectRouter(history),
-        Portfolio
+        Blog,
+        ContactUs,
+        Portfolio,
+        Aboutus,
+        Home
     });
-    

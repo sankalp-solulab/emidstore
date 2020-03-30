@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class PortfolioData extends Component {
+ class PortfolioData extends Component {
   render() {
     return (
       <div className="flex-row-2 flex-cnt">
@@ -31,3 +31,5 @@ export default class PortfolioData extends Component {
     );
   }
 }
+
+export default PortfolioData;

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import img from '../../assets/images/portfoliobanner.png';
-import PortfolioData from "./PortfolioData";
+import PortfolioData from "./PortfolioData/index.jsx";
 import {connect} from 'react-redux';
 import * as actions from '../../actions/index'; 
-import { withRouter } from "react-router-dom";
+//import { withRouter } from "react-router-dom";
 
 class Portfolio extends Component {
 
@@ -12,10 +12,11 @@ class Portfolio extends Component {
   }
 
 
-  componentWillMount(){
-    this.props.getPortfolioDetails();
-  }
+  
 
+  componentWillMount(){
+    this.props.getPortfolioDetails()
+  }
 
   componentDidUpdate(){
    
@@ -30,6 +31,7 @@ class Portfolio extends Component {
 
     if(e.target.innerText == "All"){
       var data_filter=  this.props.portfolioList
+      
     }
     else{
       var data_filter = this.props.portfolioList.filter( element => element.category == e.target.innerText)
@@ -72,10 +74,10 @@ class Portfolio extends Component {
                   <li><a onClick={(e)=>this.categoryHadler(e)}>Web</a></li>
                 </ul>
               </div>
-
+              
               {this.state.portfolioList != null 
               ? this.state.portfolioList.map(res => {
-                return  <PortfolioData data={res}/>  
+                return  <PortfolioData key={res.id} data={res}/>  
               })
               :
               null
@@ -84,11 +86,11 @@ class Portfolio extends Component {
            
 
               <div className="row">
-                <div className="col-sm-12 text-center mar-top30">
+                {/* <div className="col-sm-12 text-center mar-top30">
                   <a href="#" className="btn btn-sm btn-primary">
                     Load More
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
@@ -283,7 +285,7 @@ const mapStateToProps = ({ Portfolio }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-      getPortfolioDetails: () => dispatch(actions.getPortfolioDetails()),
+      getPortfolioDetails: () => dispatch(actions.getPortfolioDetails()), 
 });
 
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Portfolio));
+export default connect(mapStateToProps,mapDispatchToProps)(Portfolio);
